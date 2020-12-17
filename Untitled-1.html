@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>shokri</title>
+<link rel="stylesheet" href="Untitled-1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="main" id="main">
+<div class="first-block">
+<span class="calculator">Calculator</span>
+<span class="close-min-max" id="close-red">&times;</span>
+<span class="close-min-max" id="close">&#9633;</span>
+<span class="close-min-max" style="padding-top: 2px">&minus;</span>
+</div>
+
+<div class="second-block">
+<span class="menu"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEVHcEwAAACfKoRRAAAAAXRSTlMAQObYZgAAABVJREFUCNdjYCAM+P///wAh6KsOBACTYhHvwO/dOQAAAABJRU5ErkJggg==" style="height: 20px; width: 20px;">
+</span>
+<span class="standard">Standard</span>
+<span class="empty"></span>
+<span class="timepicture"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA1VBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwim1yAAAARnRSTlMABQKJ0/NUA4gs+RbU2G+kDQxx+tXa/kNQ223XbFHcBnAOVnLx1qKlo9n8y09zh04EREoqammQ+BnSFVMH4VqmqvfgK/QL52oqBAAAAOdJREFUKM+dkuduwyAURj3wjOPsvZPuvXebzvP+j9QEMHaq/sqV4I6DPn0ILGvbeHl7//z4Li/nk3wWrtbzKzrGIwMInTsQi2j285UKcJ0McMz9NFBNMIxxDeDoShXrvRPTNYAwB1afnm2AJBoECf6mZQ2sOpX/QUT5LyjJXMWT2aOqgEBIMmNH9odcK/D0yOChILXPVGuVBDerdMqebOckQUZu13ab2u5kzLDoIaWlLmiNiDv5/LLRPs9ql7iv1S7SBmfmkONCUo9qtWjRpB06Bd1uL3uo1snmrW2/MvC83QPf3vp3/AKgmCDwMHJPzwAAAABJRU5ErkJggg==" style="height: 20px; width: 20px;"></span>
+<span id="history" onclick="His()">History</span>
+<span class="empt"></span>
+<span id="memory-icon" onclick="memory()">Memory</span>
+</div>
+
+<div class="third-block">
+  <div id="input_show" ></div>
+<input type="text" placeholder="0" id="input" step="any"> </input>
+<span id="his-message" onclick = "">There's no history yet</span>
+</div>
+
+<div class="fourth-block">
+<span class="mc-mr" id="memicon-clear" onclick = "memc()">MC</span>
+<span class="mc-mr" id="memicon-replace" onclick = "memr()">MR</span>
+<span class="forth_buttons" onclick = "memp()">M+</span>
+<span class="forth_buttons" onclick = "memn()">M-</span>
+<span class="forth_buttons" onclick = "mems()">MS</span>
+<span class="forth_buttons" id="m-minus">M<sup>^</sup></span>
+</div>
+
+<div class="fifth-block">
+<div class="grid-container">
+  <div  id="percent" onclick="precent(this)">%</div>
+  <div  id="but5" onclick="clearScreen()">CE</div>
+  <div  id="but6" onclick="c()">C</div>
+  <div  id="but7" onclick="backspace()"><img src="https://img.icons8.com/material-outlined/24/000000/clear-symbol.png" height="18" width="18"></div>
+  <div  id="blue-1" value="÷" onclick="operation('÷')">÷</div> 
+  <div id="radic" onclick="sqrtt()">&radic;</div>
+  <div id="num7" value="7" onclick="btnNumber(7)">7</div>
+  <div  id="num8" value="8" onclick="btnNumber(8)">8</div>
+  <div id="num9" value="9" onclick="btnNumber(9)">9</div>
+  <div id="blue-2"  value="×" onclick="operation('×')">×</div>
+  <div id="but3" onclick="xtwo()">x²</div>  
+  <div id="num4" value="4" onclick="btnNumber(4)">4</div>
+  <div id="num5" value="5" onclick="btnNumber(5)">5</div>
+  <div id="num6" value="6" onclick="btnNumber(6)">6</div>
+  <div id="blue-3" value="-" onclick="operation('-')">-</div>
+  <div id="but4" style="font-family:'Segoe UI';" onclick="xthree()">x<sup style="font-size:12px">3</sup></div> 
+  <div id="num1" value="1" onclick="btnNumber(1)">1</div>
+  <div id="num2" value="2" onclick="btnNumber(2)">2</div>
+  <div id="num3" value="3" onclick="btnNumber(3)">3</div>
+  <div id="blue-4" value="+" onclick="operation('+')">+</div>
+  <div id="but8" onclick="xone()"><sup style="font-size:13px">1</sup>/x</div>
+  <div id="plusmn" value="±" onclick="operation('±')">±</div>
+  <div id="num0" value="0" onclick="btnNumber(0)">0</div>
+  <div id="divid" style="font-weight:800" onclick="dotNumber(this)">.</div>
+  <div id="blue-5" value="=" onclick="calc()">=</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="Untitled-1.js" ></script>
+
+</body>
+</html>
