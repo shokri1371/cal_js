@@ -79,6 +79,7 @@ html,body{
         justify-content: center;
         align-items: center;
         font-family: 'Segoe UI';
+        border-bottom: 3px solid rgb(0, 120, 215);
         text-decoration-color: blue;
         text-decoration-style: solid 15px ;
         font-weight:bold; 
@@ -195,6 +196,27 @@ html,body{
       width:100%;
       height: 84%;
       }
+      .trash{
+        float: right;
+        width: 20%;
+        height: 100%;
+      }
+      #cash {
+        float: right;
+        display: none;
+          float: right;
+          border: none;
+          outline: none;
+          background-color:rgb(225, 225, 225);;
+          padding-top: 140%;
+    }
+    #cash2 {
+      float: right;
+      border: none;
+      outline: none;
+      background-color:rgb(225, 225, 225);;
+      padding-top: 140%;
+    }
       .grid-container {
        width: 80%;
        height: 100%;
@@ -361,7 +383,9 @@ html,body{
     }
     #memory-icon{display:none;}
     #history{display:none;}
-    
+    #cash{display:none;}
+    #cash2{display:none;}
+.trash{display: none;}
     .third-block{
       height: 23%;
       width: 100%;
@@ -462,7 +486,9 @@ html,body{
     }
     #memory-icon{display:none;}
     #history{display:none;}
-    
+    #cash{display:none;}
+    #cash2{display:none;}
+.trash{display: none;}
     .third-block{
       height: 23%;
       width: 100%;
@@ -558,6 +584,7 @@ html,body{
       #history{
         width:4%;
      }
+
      .empt{
      display:flex;
      width: 43px;
@@ -635,9 +662,13 @@ html,body{
         width:57%;
     }
     #history{
+
         display:flex;
         width:9%;
      }
+     #cash{display:none;}
+     #cash2{display:none;}
+ .trash{display: none;}
     .empt{
      display:inline-flex;
      width: 20px;
@@ -649,14 +680,13 @@ html,body{
         height: 23%;
         width: 100%;
     }
+    
     input[type=text] {
       padding-right: 20px;
         width: 67%;
         height: 70%;
     }
-    li {
-      list-style-type: none;
-    }
+
     .fourth-block{
         height: 5%;
         width: 100%;
@@ -674,10 +704,12 @@ html,body{
       max-width: 14%;
       font-size: 13px;
     }
+
     .fifth-block{
       width:100%;
       height: 64.5%;
       }
+
       .grid-container {
        width: 70%;
        height: 100%;
@@ -685,6 +717,7 @@ html,body{
        grid-template-rows: 17.5% 17.5% 17.5% 17.5% 17.5% 17.5%;
        text-align: center;
      }
+
      .grid-container > div {
        font-size: 20px;
        padding: 17px;
@@ -727,6 +760,9 @@ html,body{
         display:flex;
         width:9%;
      }
+     #cash{display:none;}
+     #cash2{display:none;}
+ .trash{display: none;}
     .empt{
      display:inline-flex;
      width: 20px;
@@ -759,6 +795,7 @@ html,body{
       width:100%;
       height: 64.5%;
       }
+ 
       .grid-container {
        width: 70%;
        height: 100%;

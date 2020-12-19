@@ -6,6 +6,9 @@ var history4 =[];
 var historresult=[];
 var hiss=[];
 var mem_index = 0;
+var Cash = document.getElementById("cash");
+var Cash2 = document.getElementById("cash2");
+
 
 function btnNumber(num){
     var input_var=document.getElementById('input');
@@ -20,14 +23,13 @@ function btnNumber(num){
         case 8: input_var.value +='8'; break;
         case 9: input_var.value +='9'; break; 
         case 0: input_var.value +='0';break; 
-        //case '.' : input_var.value +='.';break; 
     }
-    //number1 = input_var.value;
-
+    number = input_var.value
 }
 
 function operation(operand){
     var input_var=document.getElementById('input');
+
 switch(operand){
 case '+': input_var.value +='+'; break;
 case '-': input_var.value +='-'; break;
@@ -35,19 +37,19 @@ case '÷': input_var.value +='/'; break;
 case '×': input_var.value +='*'; break;
 case '±': input_var.value += '-' + input_var.value; break;
 }
- document.getElementById('input_show').innerHTML = input_var.value;
-number1=document.getElementById('input').value;
+document.getElementById('input_show').innerHTML = input_var.value;
 }
 
 function calc(){
-    var input_var=document.getElementById('input');
-ans = Math.floor(+eval(input_var.value));
-//document.getElementById('input').value = ans;
+    var input_vaar=document.getElementById('input');
+ans = Math.floor(+eval(input_vaar.value));
+his1=input_vaar.value;
+document.getElementById('input').value = ans;
 document.getElementById('input_show').innerHTML ='';
 document.getElementById('input_show').style.color="gray";
-history4 += document.getElementById('input').value + '=' + ans + "<br>";
+history4 += his1 + '=' + ans + "<br>";
 document.getElementById('his-message').innerHTML= history4+ "<br>";
-input_var.value=ans;
+input_vaar.value=ans;
 anss = ans;
 his_row_indx = 1;
 }
@@ -100,14 +102,19 @@ function memory() {
     var hisIcon = document.getElementById("history");
     memIcon.style.borderBottom = "3px solid blue";
     hisIcon.style.borderBottom = "none";
-     document.getElementById('his-message').innerHTML="There's nothing saved in memory";
+    if(document.getElementById('memicon-clear').style.color != 'black'){
+     document.getElementById('his-message').innerHTML="There's nothing saved in memory";}
      if(document.getElementById('memicon-clear').style.color == 'black'){
     document.getElementById('his-message').innerHTML = inner_message;
      }
     his_index = 0;
     mem_index = 1;
+    if(his_row_indx == 0){
+        document.getElementById('his-message').innerHTML="There's nothing saved in memory";
+    }
     return his_index,mem_index;
 }
+var H1 = document.getElementsByClassName("history1");
 
 function His() {
     var memIcon = document.getElementById("memory-icon");
@@ -116,11 +123,11 @@ function His() {
     memIcon.style.borderBottom = "none";    
     his_index = 1;
     mem_index = 0;
-    if(his_row_indx == 0){
-        document.getElementById('his-message').innerHTML="There's no history yet";
-     }if(his_row_indx == 1){
+    if(his_row_indx == 1){
         document.getElementById('his-message').innerHTML= history4 + "<br>" + "<br>";
-    }
+    }if(his_row_indx == 11){
+        document.getElementById('his-message').innerHTML="There's no history yet";
+     }
     return his_index,mem_index;
 }
 
@@ -128,12 +135,16 @@ function mems() {
     var input_var = document.getElementById('input').value;
     var mem_text = document.getElementById('his-message');
     var old_saved = inner_message;
+    var Cash = document.getElementById("cash");
+
     if (document.getElementById('memicon-clear').style.color != 'black') {
-        inner_message = input_var ;
+        inner_message = input_var;
     }else if(document.getElementById('memicon-clear').style.color == 'black') {
+         
         var old_value = old_saved;
-        var new_value = input_var + ',' + old_value;
+        var new_value = input_var + ',' + '<br>' + old_value;
         inner_message = new_value;
+        inn=inner_message;
     }
     var memc_color = document.getElementById('memicon-clear');
     memc_color.style.color = 'black';
@@ -218,7 +229,6 @@ memr_color.style.color = 'darkgrey';
 function memr() {
     
     if (document.getElementById('memicon-replace').style.color == 'black') {
-        var number = inner_message;
         if(document.getElementById('his-message').innerHTML == inner_message){
         var first_number = document.getElementById('his-message').innerHTML.split(",");
         var new_value = first_number[0];
@@ -236,4 +246,18 @@ function memr() {
 function dotNumber(e){
     var txt=document.getElementById('input');
     txt.value +=e.innerHTML;
+}
+
+
+ function mc1(){
+    inn='';
+    //document.getElementById('his-message').innerHTML = "There's nothing saved in memory";
+    his_row_indx = 0;
+}
+
+function Hc1(){
+    document.getElementById('his-message').innerHTML='';
+    document.getElementById('his-message').value='';
+    document.getElementById('his-message').innerHTML = "There's no history yet";
+    his_row_indx = 0;
 }
